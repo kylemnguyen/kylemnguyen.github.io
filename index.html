@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+    <header>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+        <title>KYLEMNGUYEN PORTFOLIO!</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&display=swap" rel="stylesheet">
+        <style>
+
+            body {
+                background-color: rgb(242, 242, 242);
+            }
+            p {
+                color: rgb(91, 91, 91);
+            }
+            .lightfont {
+                font-family: "Geist Mono", serif;
+                font-optical-sizing: auto;
+                font-weight: 300;
+                font-style: normal;
+            }
+
+            .heavyfont {
+                font-family: "Geist Mono", serif;
+                font-optical-sizing: auto;
+                font-weight: 400;
+                font-style: normal;
+            }
+            
+            .header {
+                width: 90%;
+                position: fixed;
+                text-align: center;
+                top: 5px;
+                margin-left: 5%;
+                color: green;
+            }
+            .nav-bar {
+                padding: 5px;
+                width: 90%;
+                border: 2px gray solid;
+                padding-left: 10px;
+                padding-right: 10px;
+                margin-left: auto;
+                margin-right: auto;
+                background-color: rgb(237, 237, 232);
+                border-bottom: 0;
+
+            }
+            .contact-me {
+                padding: 5px;
+                padding-left: 10px;
+                padding-right: 10px;
+                font-size: 16px;
+                width: 90%;
+                border: 2px gray dotted;
+                background-color: rgb(209, 209, 201);
+                margin-left: auto;
+                margin-right: auto;
+                border-top: 0;
+            }
+            @media (max-width: 826px) {
+                .header{
+                    margin: 0;
+                }
+                .nav-bar {
+                    padding-bottom: 20px;
+                    border: 2px gray solid;
+                }
+                .contact-me {
+                    display: none;
+                }
+
+            }
+            .right {
+                float: right;
+            }
+            .left {
+               float: left
+            }
+            a {
+               text-decoration: none;
+               color: green;
+            }
+            a:hover {
+               font-weight: 500; 
+               color: darkgreen;
+            }
+            .about1 {
+                width: 90%;
+                margin-top: 100px;
+                display: inline-flex;
+                margin-left: 5%;
+            }
+            .about {
+                width: 90%;
+                display: inline-flex;
+                margin-top: 15px;
+                margin-left: 5%;
+            }
+            .brag {
+                width: 90%;
+                margin-top: 15px;
+                display: inline-flex;
+                margin-left: 7%;
+            }
+            .crop {
+                overflow: hidden;
+                width: auto;
+                margin-left: 15px;
+                margin-right: 5px;
+                background-color: rgb(237, 237, 232);
+                outline: 2px gray dotted;
+                outline-offset: 5px;
+            }
+            .crop1 {
+                width: auto;
+                overflow: hidden;
+                background-color: rgb(237, 237, 232);
+                outline: 2px gray dotted;
+                outline-offset: 5px;
+                margin-right: 5px;
+
+            }
+            .concept-images {
+                margin-top: 25px;
+                margin-left: auto;
+                margin-right: auto;
+                width: 90%;
+                display: flex;
+            }
+            .experience {
+                margin-top: 25px;
+                background-color: rgb(237, 237, 232);
+                height: 150px;
+                width: 90%;
+                border: 1px solid gray;
+                margin-left: 5px;
+            }
+            .block {
+                width: 25%;
+                background-color: rgb(237, 237, 232);
+                border: 1px solid gray;
+                border-right: 2px dotted gray;
+                padding: 5px;
+                height: 30%;
+            }
+            .who-i-am {
+                height: fit-content;
+                width: 70%;
+                margin-left: 15px;
+                background-color: rgb(237, 237, 232);
+                border: 1px solid gray;
+                border-left: 2px dotted gray;
+                padding: 5px;
+
+
+            }
+        </style>
+    </header>
+    <body>
+        <div class="main">
+
+        
+            <div class="header lightfont">
+                <div class="nav-bar ">
+                    <div class="left heavyfont">
+                        <a id="name">KYLE_NGUYEN</a>
+                    </div>
+                    <a href="https://www.linkedin.com/in/kyleminhtnguyen/" target="_blank" style="font-size: 12px">LINKEDIN</a> /
+                    <a href="https://github.com/kylemnguyen" target="_blank" style="font-size: 12px">GITHUB</a> /
+                    <a href="#contact" style="font-size: 12px">CONTACT ME</a>
+                    <!-- <a style="font-size: 12px">TIKTOK</a> -->
+                    
+                    <div class="right">
+                        <a href="#about">ABOUT</a>  
+                        <a href="#ex">EXPERIENCE</a>
+                        <a href="#projects">PROJECTS</a>
+                        <a href="#bold">BOLD_CATALOGUE</a>
+                    </div>
+                    
+                </div>
+                <div class="contact-me">
+                    <a>What're you waiting for?</a>
+                </div>
+            </div>
+                    
+            <div id="about"></div>
+            <div class="about1 lightfont">
+                <img src="images/headshot.png" alt="A photo of myself" style="width: 150px; height: 150px; border: 2px dotted gray; padding: 5px; background-color: rgb(237, 237, 232)">
+                <div style="min-height: 100%; width: 100%; border: 1px solid gray; margin-left: 10px; padding: 5px; border-left: 2px dotted gray; background-color: rgb(237, 237, 232)">
+                    <h2>Introduce yourself to everyone.</h2>
+                    <p>Hello! My name is Kyle Nguyen. <br>&emsp;I am a 2nd-year undergraduate student at the University of Alberta. 
+                        Majoring in Computing Science and minoring in Mathematics.
+                    </p>
+                </div>
+            </div>
+            <div class="about lightfont">
+                <div style="min-height: 100%; width: 75%; border: 1px solid gray; margin-left: -25px; padding: 5px; border-right: 2px dotted gray; background-color: rgb(237, 237, 232)">
+                    <h3>What do you do?</h3>
+                    <p>&emsp; I code! I like to work with software development, full-stack development, game development
+                         and sometimes a bit of animation.
+                    </p>
+                    <hr>
+                    <h4>What kind of stuff are you working with right now?</h4>
+                    <p>
+                        &emsp; I'm currently working with alot of different program languages. More specifically: Java, Python, HTML/CSS, Javascript, and <i>whatever you need</i>.
+                        At the moment, I am interested in learning how Api's work and how to utilize them to assist in developing flexible and dynamic software.                      
+                    </p>
+                    <hr>
+                    <h4>That sound's really interesting. Any frameworks or databases?</h4>
+                    <p>
+                        &emsp; Yeah! I know a few.
+                    </p>
+                </div>
+                <img src="images/knight.gif" alt="A knight idle" style="margin-top: 15px; margin-left: 10px; border: 1px solid gray; border-left: 2px dotted gray; width: 175px; height: 175px; outline: 1px solid gray; outline-offset: -10px;  padding: 5px; background-color: rgb(237, 237, 232)">
+            </div>
+
+            <div class="brag lightfont">
+                <div class="block">
+                    <h4>What's a cool thing about you?</h4>
+                    <p>&emsp; I found out lamb meant sheep meat and baby sheep. I always thought lamb was it's own animal.</p>
+                    <h4>I guess that's cool.</h4>
+                </div>
+                <div class="who-i-am">
+                    <h3>but, who are you?</h3>
+                    <p>&emsp; I am.
+                    </p>
+                    <h4>wow! that's alot of information at once.</h4>
+                </div>
+            </div>
+
+
+            
+            <div class="concept-images">
+                <div class="crop1">
+                    <img class="images" src="images/concept1.png" alt="concept_1_knight at boss level">
+                </div>
+
+                <div class="crop">
+                    <img class="images" src="images/concept2.png" alt="concept_1_knight at boss level">
+                </div>
+
+                <div class="crop">
+                    <img class="images" src="images/concept3.png" alt="concept_1_knight at boss level" >
+                </div>
+            </div>
+            <div class="lightfont" style="text-align: center; width: 80%; margin-top: 15px; margin-left: auto; margin-right: auto; border: 1px solid gray;border-top: 2px dotted gray;  background-color: rgb(237, 237, 232);">
+                <p>^^ Some concepts I made ^^</p>
+            </div>
+
+            <div class="experience lightfont">
+                <h2 id="ex">Experience & Volunteering</h2>
+            </div>
+            <div class="experience lightfont">
+                <h2 id="projects">Projects</h2>
+            </div>
+            <div class="experience lightfont">
+                <h2 id="bold">BOLD catalogue.</h2>
+            </div>
+            <div class="experience lightfont">
+                <h2 id="contact">Contact Me!</h2>
+            </div>
+
+        </div>            
+    </body>
+</html>
