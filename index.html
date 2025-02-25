@@ -134,10 +134,12 @@
             .experience {
                 margin-top: 25px;
                 background-color: rgb(237, 237, 232);
-                height: 150px;
                 width: 90%;
+                height: fit-content;
                 border: 1px solid gray;
-                margin-left: 5px;
+                margin-left: auto;
+                margin-right: auto;
+                padding: 5px;
             }
             .block {
                 width: 25%;
@@ -158,7 +160,79 @@
 
 
             }
+            #message {
+                width: 80%;
+                margin-left: auto;
+                margin-right: auto;
+                height: 250px;
+            }
+            .contact {
+                margin-top: 25px;
+                background-color: rgb(237, 237, 232);
+                width: 50%;
+                height: fit-content;
+                border: 1px solid gray;
+                margin-left: auto;
+                margin-right: auto;
+                padding: 5px;
+            }
+            input {
+                width: 50%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .submit-button {
+                margin-top: 15px;
+                width: 100%;
+                padding: 5px;
+                border: none;
+                background-color: rgb(209, 209, 201);
+            }
+            .submit-button:hover {
+                background-color: rgb(189, 189, 182);
+                font-weight: 500;
+            }
         </style>
+        <script>
+            const form = document.getElementById('form');
+            const result = document.getElementById('result');
+            
+            form.addEventListener('submit', function(e) {
+              e.preventDefault();
+              const formData = new FormData(form);
+              const object = Object.fromEntries(formData);
+              const json = JSON.stringify(object);
+              result.innerHTML = "Please wait..."
+            
+                fetch('https://api.web3forms.com/submit', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'Accept': 'application/json'
+                        },
+                        body: json
+                    })
+                    .then(async (response) => {
+                        let json = await response.json();
+                        if (response.status == 200) {
+                            result.innerHTML = "Form submitted successfully";
+                        } else {
+                            console.log(response);
+                            result.innerHTML = json.message;
+                        }
+                    })
+                    .catch(error => {
+                        console.log(error);
+                        result.innerHTML = "Something went wrong!";
+                    })
+                    .then(function() {
+                        form.reset();
+                        setTimeout(() => {
+                            result.style.display = "none";
+                        }, 3000);
+                    });
+            });
+            </script>
     </header>
     <body>
         <div class="main">
@@ -250,18 +324,84 @@
             <div class="lightfont" style="text-align: center; width: 80%; margin-top: 15px; margin-left: auto; margin-right: auto; border: 1px solid gray;border-top: 2px dotted gray;  background-color: rgb(237, 237, 232);">
                 <p>^^ Some concepts I made ^^</p>
             </div>
+            <div id="ex"></div>
+            <div class="experience lightfont">
+                <h2>Experience & Volunteering</h2>
+                <hr>
+                <div>
+                    <div class="right">
+                        Edmonton, AB | 2024-Present
+                    </div>
+                    <h3 style="margin-bottom: 0px;">Meals On Wheels</h3>
+                    <p style="font-size: 14px; margin-top: 0;">Volunteer</p>
+                </div>
+                <p>&emsp;Over at Meals On Wheels, I was a volunteer meal-prepper. 
+                    I assisted in preparing ingredients used to create meal portions for those in need in the surrounding areas.
+                    I also helped in the packaging and sorting of meals, making sure to be aware of each individual hamper's dietary restrictions and needs.
+                </p>
+                <div>
+                    <div class="right">
+                        Edmonton, AB | 2025-Present
+                    </div>
+                    <h3 style="margin-bottom: 0px;">Help Young Minds</h3>
+                    <p style="font-size: 14px; margin-top: 0;">Volunteer Tutor</p>
+                </div>
+                <p>&emsp; At Help Young Minds, I assist in the develpoment of youth education through the accessibility of free tutoring and assistance. 
+                    I mainly helped with physics (grade 5-12 level), and math (grade 5-12 level).
+                </p>
+                <div>
+                    <div class="right">
+                        Edmonton, AB | Aug 2024-Present
+                    </div>
+                    <h3 style="margin-bottom: 0px;">Boxcar Coffee Shop</h3>
+                    <p style="font-size: 14px; margin-top: 0;">Barista</p>
+                </div>
+                <p>&emsp; At Help Young Minds, I assist in the develpoment of youth education through the accessibility of free tutoring and assistance. 
+                    I mainly helped with physics (grade 5-12 level), and math (grade 5-12 level).
+                </p>
+            </div>
+
+            <div class="experience lightfont" style="width:80%; margin-right: 15px;">
+                <h2 id="projects">Projects</h2>
+                <hr>
+                <p>This is where a lot of fun stuff happens...</p>
+            </div>
+
+            <div></div>
+
 
             <div class="experience lightfont">
-                <h2 id="ex">Experience & Volunteering</h2>
-            </div>
-            <div class="experience lightfont">
-                <h2 id="projects">Projects</h2>
-            </div>
-            <div class="experience lightfont">
                 <h2 id="bold">BOLD catalogue.</h2>
+                <hr>
+                <p>A collection of thoughts, ideas, and memories.</p>
             </div>
-            <div class="experience lightfont">
+            <div class="contact lightfont">
                 <h2 id="contact">Contact Me!</h2>
+                <hr>
+                <form action="https://api.web3forms.com/submit" method="POST">
+
+                    <!-- Replace with your Access Key -->
+                    <input type="hidden" name="access_key" value="ba0eb7d4-c63e-42ca-9f84-aa453570a5c7">
+                
+                    <!-- Form Inputs. Each input must have a name="" attribute -->
+                    <p>Name:</p>
+                    <input type="text" name="name" required>
+                    <br>
+                    <p>Email</p>
+                    <input type="email" name="email" required>
+                    <br>
+                    <p>Message:</p>
+                    <textarea id="message"name="message" required></textarea>
+                
+                    <!-- Honeypot Spam Protection -->
+                    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+                
+                    <!-- Custom Confirmation / Success Page -->
+                    <!-- <input type="hidden" name="redirect" value="https://mywebsite.com/thanks.html"> -->
+                    <br>
+                    <button class="submit-button lightfont" type="submit">Submit Form</button>
+                
+                </form>
             </div>
 
         </div>            
