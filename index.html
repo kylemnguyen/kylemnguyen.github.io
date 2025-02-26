@@ -141,6 +141,17 @@
                 margin-right: auto;
                 padding: 5px;
             }
+            .project1 {
+                margin-top: 25px;
+                background-color: rgb(237, 237, 232);
+                width: 80%;
+                height: fit-content;
+                border: 1px solid gray;
+                border-top: 2px dotted gray;
+                border-bottom: 2px dotted gray;
+                margin-left: 10%;
+                padding: 5px;
+            }
             .block {
                 width: 25%;
                 background-color: rgb(237, 237, 232);
@@ -191,7 +202,32 @@
             .submit-button:hover {
                 background-color: rgb(189, 189, 182);
                 font-weight: 500;
+                cursor: pointer;
             }
+            .magazine {
+                width: 90%;
+                margin-top: 15px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .mag-button {
+                min-width: 100%;
+                width: 100%;
+                padding: 5px;
+                border: none;
+                background-color: rgb(237, 237, 232);
+                border: 1px solid gray;
+            }
+            .mag-button:hover {
+                background-color: rgb(209, 209, 201);
+                cursor: pointer;
+            }
+            
+            .pages {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
         </style>
         <script>
             const form = document.getElementById('form');
@@ -232,6 +268,10 @@
                         }, 3000);
                     });
             });
+
+            const next = document.getElementById("next");
+            const prev = document.getElementById("prev");
+
             </script>
     </header>
     <body>
@@ -300,9 +340,10 @@
                 </div>
                 <div class="who-i-am">
                     <h3>but, who are you?</h3>
-                    <p>&emsp; I am.
+                    <p>&emsp; I enjoy trying everything. Whether it is new skills, new hobbies, random facts, if it's interesting to me--i've got to try it.
+
                     </p>
-                    <h4>wow! that's alot of information at once.</h4>
+                    <h4>Wow! that's alot of information at once.</h4>
                 </div>
             </div>
 
@@ -330,7 +371,7 @@
                 <hr>
                 <div>
                     <div class="right">
-                        Edmonton, AB | 2024-Present
+                        Edmonton, AB | May 2024-Present
                     </div>
                     <h3 style="margin-bottom: 0px;">Meals On Wheels</h3>
                     <p style="font-size: 14px; margin-top: 0;">Volunteer</p>
@@ -341,7 +382,7 @@
                 </p>
                 <div>
                     <div class="right">
-                        Edmonton, AB | 2025-Present
+                        Edmonton, AB | Feb 2025-Present
                     </div>
                     <h3 style="margin-bottom: 0px;">Help Young Minds</h3>
                     <p style="font-size: 14px; margin-top: 0;">Volunteer Tutor</p>
@@ -353,11 +394,12 @@
                     <div class="right">
                         Edmonton, AB | Aug 2024-Present
                     </div>
-                    <h3 style="margin-bottom: 0px;">Boxcar Coffee Shop</h3>
+                    <h3 style="margin-bottom: 0px;">Boxcar Coffeeshop</h3>
                     <p style="font-size: 14px; margin-top: 0;">Barista</p>
                 </div>
-                <p>&emsp; At Help Young Minds, I assist in the develpoment of youth education through the accessibility of free tutoring and assistance. 
-                    I mainly helped with physics (grade 5-12 level), and math (grade 5-12 level).
+                <p>&emsp; As a barista at Boxcar, I create, decorate, and serve confectionaries and desserts.
+                    Also, along with working within a tight-knit community I've gained meaningful experiences and relationships with our guests. 
+                    More on, I ensure and maintain a clean and welcoming environment for guests while supporting their needs.
                 </p>
             </div>
 
@@ -366,15 +408,64 @@
                 <hr>
                 <p>This is where a lot of fun stuff happens...</p>
             </div>
+            <div name="project-showcase">
+                <div class="project1 lightfont">
+                    <div>
+                        <div class="right">
+                            <a href="" target="_blank"style="color: black; text-decoration: underline;">git</a>
+                        </div>
+                        <h3 style="margin-bottom: 0;">Project #1</h3>
+                        <p style="font-size: 14px; margin-top: 0;">Technology used: </p>
+
+                    </div>
+                    
+                    <p>Blah blah blah!</p>
+
+                </div>
+                <div class="project1 lightfont" style="margin-left: 5%;">
+                    <div>
+                        <div class="right">
+                            <a href="" target="_blank"style="color: black; text-decoration: underline;">git</a>
+                        </div>
+                        <h3 style="margin-bottom: 0;">Project #2</h3>
+                        <p style="font-size: 14px; margin-top: 0;">Technology used: </p>
+                    </div>
+                    
+                    <p>Blah blah blah!</p>
+
+                </div>
+                <div class="project1 lightfont" style="margin-left: 3%; border-bottom: 1px solid gray;">
+                    <div>
+                        <div class="right">
+                            <a href="" target="_blank"style="color: black; text-decoration: underline;">git</a>
+                        </div>
+                        <h3 style="margin-bottom: 0;">Project #3</h3>
+                        <p style="font-size: 14px; margin-top: 0;">Technology used: </p>
+                    </div>
+                    
+                    <p>Blah blah blah!</p>
+
+                </div>
+            </div>
 
             <div></div>
 
 
-            <div class="experience lightfont">
+            <div class="experience lightfont" style="border-bottom: 2px dotted gray;">
                 <h2 id="bold">BOLD catalogue.</h2>
                 <hr>
                 <p>A collection of thoughts, ideas, and memories.</p>
             </div>
+            <div style="width: 90%; background-color:rgb(237, 237, 232); margin-left: auto; margin-right: auto; padding: 5px; margin-top: 0;margin-bottom: -15px; border: 1px solid gray; border-top: none; border-bottom: none;">
+                <img class="pages" src="images/bold_catalogue/1.png" style="display: block; width: 550px; height: 660px; margin-left: auto; margin-right: auto; margin-top: 15px; margin-bottom: 15px; border: 1px solid gray; outline: 2px gray dotted; outline-offset: 5px;">
+                
+            </div>
+
+            <div class="magazine lightfont" style="background-color: rgb(237, 237, 232); padding: 5px; border: 1px solid gray; border-top: none;">
+                <button id="prev" class="mag-button lightfont" style="border-top: 2px dotted gray; border-bottom: none;">prev</button>
+                <button id="next" class="mag-button lightfont" >next</button>
+            </div>
+
             <div class="contact lightfont">
                 <h2 id="contact">Contact Me!</h2>
                 <hr>
