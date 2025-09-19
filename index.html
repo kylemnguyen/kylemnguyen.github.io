@@ -239,18 +239,15 @@
                 margin-left: auto;
                 margin-right: auto;
             }
-            .project1-images {
-                width: fit-content;
-                margin: auto;
-                padding-left: 5px;
-            }
 
-            .project1-images img {
-                width: 32.5%;
+            .project1-images {
+                width: 90%;
                 border: 1px solid gray;
                 outline: 1px dashed gray;
                 outline-offset: 4px;
+                margin: auto;
             }
+            
 
         </style>
         <script>
@@ -330,7 +327,7 @@
                 <img src="images/headshot.png" alt="A photo of myself" style="width: 150px; height: 150px; border: 2px dotted gray; padding: 5px; background-color: rgb(237, 237, 232)">
                 <div style="min-height: 100%; width: 100%; border: 1px solid gray; margin-left: 10px; padding: 5px; border-left: 2px dotted gray; background-color: rgb(237, 237, 232)">
                     <h2>Introduce yourself to everyone.</h2>
-                    <p>Hello! My name is Kyle Nguyen. <br>&emsp;I am a 2nd-year undergraduate student at the University of Alberta. 
+                    <p>Hello! My name is Kyle Nguyen. <br>&emsp;I am a 3rd-year undergraduate student at the University of Alberta. 
                         Majoring in Computing Science and minoring in Mathematics.
                     </p>
                 </div>
@@ -442,18 +439,21 @@
                             <a href="https://boxcarcoffeeshop.ca/" target="_blank"style="color: black; text-decoration: underline;">link</a>
                         </div>
                         <h3 style="margin-bottom: 0;">Project #1: Boxcar Coffeeshop's website.</h3>
-                        <p style="font-size: 14px; margin-top: 0;">Technology used: HTML, CSS, JS, Adobe Fonts</p>
+                        <p style="font-size: 14px; margin-top: 0;">Technology used: HTML, CSS, JS, Adobe Fonts, GoDaddy</p>
 
                     </div>
 
-                    <div class="project1-images">
-                        <img src="images/project1_sample_01.png" width="30%">
-                        <img src="images/project1_sample_02.png" width="30%">
-                        <img src="images/project1_sample_03.png" width="30%">
-                        
+                    <div class="project1-image-slideshow">
+                        <img src="images/project1_sample01.png" class="project1-images">
+                        <img src="images/project1_sample02.png" class="project1-images">
+                        <img src="images/project1_sample03.png" class="project1-images">
+                    </div>
+                    <div class="magazine lightfont" style="background-color: rgb(237, 237, 232); padding: 5px; border: 1px solid gray; border-top: none;">
+                        <button id="prev" class="mag-button lightfont" style="border-top: 2px dotted gray; border-bottom: none;" onclick="addProjectOne(-1)">prev</button>
+                        <button id="next" class="mag-button lightfont" onclick="addProjectOne(1)" >next</button>
                     </div>
                     
-                    <p>&emsp;&emsp;Where else could I start? Web-dev. Made with intentions of being clean, simple, and full of character. I pay great respects to the owners of Boxcar, for the opportunity of a lifetime. Thank you.</p>
+                    <p>&emsp;&emsp;Where else could I start? Web-dev. Made with intentions of being clean, simple, and full of character. I pay respects to the owners of Boxcar, for the opportunity. Thank you.</p>
 
                 </div>
 
