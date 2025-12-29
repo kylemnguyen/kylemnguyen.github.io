@@ -258,6 +258,36 @@
                 outline-offset: 4px;
                 margin: auto;
             }
+            .knight-img {
+                margin-top: 15px; 
+                margin-left: 10px; border: 1px solid gray; border-left: 2px dotted gray; width: 300px; height: 300px; outline: 1px solid gray; outline-offset: -10px;  padding: 5px; background-color: rgb(237, 237, 232);
+            }
+
+            @media (max-width: 900px) {
+
+                .header {
+                    width: 90%;
+                    position: fixed;
+                    text-align: center;
+                    top: 5px;
+                    color: green;
+                }
+
+                .knight-img {
+                    width: 150px;
+                    height: 150px;
+                }
+
+                .contact {
+                    width: 95vw;
+                    text-align: center;
+                }
+
+                .slides {
+                    width: 80vw;
+                }
+                
+            }
             
 
         </style>
@@ -360,7 +390,7 @@
                         &emsp; Thanks! I think so too.
                     </p>
                 </div>
-                <img src="images/knight.gif" alt="A knight idle" style="margin-top: 15px; margin-left: 10px; border: 1px solid gray; border-left: 2px dotted gray; width: 300px; height: 300px; outline: 1px solid gray; outline-offset: -10px;  padding: 5px; background-color: rgb(237, 237, 232)">
+                <img class="knight-img" src="images/knight.gif" alt="A knight idle">
             </div>
 
             <div class="brag lightfont">
@@ -385,16 +415,16 @@
 
             
             <div class="concept-images">
-                <div class="crop1">
-                    <img class="images" src="images/concept1.png" alt="concept_1_knight at boss level">
+                <div class="crop">
+                    <img class="images-dante" src="images/concept1.png" alt="concept_1_knight at boss level">
                 </div>
 
                 <div class="crop">
-                    <img class="images" src="images/concept2.png" alt="concept_1_knight at boss level">
+                    <img class="images-dante" src="images/concept2.png" alt="concept_1_knight at boss level">
                 </div>
 
                 <div class="crop">
-                    <img class="images" src="images/concept3.png" alt="concept_1_knight at boss level" >
+                    <img class="images-dante" src="images/concept3.png" alt="concept_1_knight at boss level" >
                 </div>
             </div>
             <div class="lightfont" style="text-align: center; width: 80%; margin-top: 15px; margin-left: auto; margin-right: auto; border: 1px solid gray;border-top: 2px dotted gray;  background-color: rgb(237, 237, 232);">
@@ -438,13 +468,13 @@
                 </p>
             </div>
 
-            <div class="experience lightfont" style="width:80%; margin-left: auto; border-bottom: 2px dotted gray;">
+            <div class="experience lightfont" style="width:75%; border-bottom: 2px dotted gray;">
                 <h2 id="projects">Projects</h2>
                 <hr>
                 <p>This is where a lot of fun stuff happens...</p>
             </div>
             <div name="project-showcase">
-                <div class="project1 lightfont" style="margin-left: 15%;">
+                <div class="project1 lightfont" style="">
                     <div>
                         <div class="right">
                             <a href="https://devpost.com/software/neuromotion" target="_blank"style="color: black; text-decoration: underline;">devpost</a>
@@ -462,7 +492,7 @@
                 </div>
 
 
-                <div class="project1 lightfont" style="margin-left: 12.5%;">
+                <div class="project1 lightfont" style="">
                     <div>   
                         <div class="right">
                             <a href="https://boxcarcoffeeshop.ca/" target="_blank"style="color: black; text-decoration: underline;">link</a>
@@ -488,7 +518,7 @@
 
                 
                 
-                <div class="project1 lightfont" style="margin-left: 10%; border-bottom: 1px solid gray;">
+                <div class="project1 lightfont" style="border-bottom: 1px solid gray;">
                     <div>
                         <div class="right">
                             <a href="" target="_blank"style="color: black; text-decoration: underline;">git</a>
